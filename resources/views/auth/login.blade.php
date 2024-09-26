@@ -48,16 +48,21 @@
                   </div>
                   <div class="login_form">
                       <!-- Session Status -->
+<<<<<<< HEAD
                     
                          @if (session('status'))
                                 <div class="alert" style="color:white; margin-left: 155px !important;">{{ session('status') }}</div>
                          @endif
+=======
+                         <x-auth-session-status class="mb-4" :status="session('status')" />
+>>>>>>> 9ba24f8 (Authentication Design migration)
                      <form method="POST" action="{{ route('login') }}">
                      @csrf
                         <fieldset>
                            <div class="field">
                               <label class="label_field">Email Address</label>
                               <input type="email" id="email" name="email" placeholder="E-mail">
+<<<<<<< HEAD
                              
                 
                            </div>
@@ -72,6 +77,15 @@
                              @error('password')
                               <div class="alert" style="color:red; margin-left: 125px !important;">{{ $message }}</div>
                               @enderror
+=======
+                              <x-input-error :messages="$errors->get('email')" class="mt-2" :value="old('email')" required autofocus autocomplete="username" />
+                           </div>
+                           <div class="field">
+                              <label class="label_field">Password</label>
+                              <input type="password" name="password" id="password" placeholder="Password" required autocomplete="current-password">
+                              <x-input-error :messages="$errors->get('password')" class="mt-2" />
+                           </div>
+>>>>>>> 9ba24f8 (Authentication Design migration)
                           
                            <div class="field">
                               <label class="label_field hidden"></label>

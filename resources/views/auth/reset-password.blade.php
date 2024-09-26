@@ -57,6 +57,7 @@
                         
                            <div class="field">
                               <label class="label_field">Email</label>
+<<<<<<< HEAD
                               <input type="email" name="email" :value="old('email', $request->email)" autofocus autocomplete="username" placeholder="Enter Email">
                               
                            </div>
@@ -81,6 +82,25 @@
                             @error('password_confirmation')
                                 <div class="alert" style="color:red; margin-left: 152px !important;">{{ $message }}</div>
                              @enderror
+=======
+                              <input type="email" name="email" :value="old('email', $request->email)" required autofocus autocomplete="username" placeholder="Enter Email">
+                              <x-input-error :messages="$errors->get('email')" class="mt-2" />
+                           </div>
+
+
+                           <div class="field">
+                              <label class="label_field">Password</label>
+                              <input type="password" name="password" placeholder="Enter Your Password" id="password" required autocomplete="new-password">
+                              <x-input-error :messages="$errors->get('password')" class="mt-2" />
+                           </div>
+						   
+						   <div class="field">
+                              <label class="label_field">Confirm Password</label>
+                              <input type="password" id="password_confirmation" name="password_confirmation" required autocomplete="new-password"  placeholder="Confirm Password">
+                              <x-input-error :messages="$errors->get('password_confirmation')" class="mt-2" />
+                           </div>
+                           
+>>>>>>> 9ba24f8 (Authentication Design migration)
                           
                            <div class="field margin_0">
                              
