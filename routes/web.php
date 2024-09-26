@@ -9,7 +9,7 @@ use App\Http\Controllers\MailsController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('auth.login');
 });
 
 Route::get('admin/dashboard', function () {

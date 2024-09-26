@@ -48,7 +48,10 @@
                   </div>
                   <div class="login_form">
                       <!-- Session Status -->
-                         <x-auth-session-status class="mb-4" :status="session('status')" />
+                    
+                         @if (session('status'))
+                                <div class="alert" style="color:white; margin-left: 155px !important;">{{ session('status') }}</div>
+                         @endif
                      <form method="POST" action="{{ route('login') }}">
                      @csrf
                         <fieldset>

@@ -15,8 +15,11 @@
                             name="password"
                             required autocomplete="current-password" />
 
-            <x-input-error :messages="$errors->get('password')" class="mt-2" />
+            
         </div>
+        @error('password')
+          <div class="alert" style="color:red; margin-left: 125px !important;">{{ $message }}</div>
+        @enderror
 
         <div class="flex justify-end mt-4">
             <x-primary-button>

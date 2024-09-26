@@ -48,16 +48,25 @@
 				  <p>Enter your email and we'll send you instructions to reset your password</p>
                       <!-- Session Status -->
                    
+<<<<<<< HEAD:storage/framework/views/a212cd958feffc52ff0aeacd45539e9d.php
                      <?php if(session('status')): ?>
                                 <div class="alert" style="color:white; margin-left: 155px !important;"><?php echo e(session('status')); ?></div>
                      <?php endif; ?>
                      <form method="POST" action="<?php echo e(route('password.email')); ?>" >
                      <?php echo csrf_field(); ?>
+=======
+                     @if (session('status'))
+                                <div class="alert" style="color:white; margin-left: 155px !important;">{{ session('status') }}</div>
+                     @endif
+                     <form method="POST" action="{{ route('password.email') }}" >
+                     @csrf
+>>>>>>> be24c01 (Design Integration):resources/views/auth/forgot-password.blade.php
                         <fieldset>
                            <div class="field">
                               <label class="label_field">Email Address</label>
                               <input id="email" placeholder="Enter Your E-mail" type="email" name="email" :value="old('email')" autofocus>
                            </div>
+<<<<<<< HEAD:storage/framework/views/a212cd958feffc52ff0aeacd45539e9d.php
                              <?php $__errorArgs = ['email'];
 $__bag = $errors->getBag($__errorArgs[1] ?? 'default');
 if ($__bag->has($__errorArgs[0])) :
@@ -68,6 +77,11 @@ $message = $__bag->first($__errorArgs[0]); ?>
 if (isset($__messageOriginal)) { $message = $__messageOriginal; }
 endif;
 unset($__errorArgs, $__bag); ?>
+=======
+                             @error('email')
+                                <div class="alert" style="color:red; margin-left: 125px !important;">{{ $message }}</div>
+                             @enderror
+>>>>>>> be24c01 (Design Integration):resources/views/auth/forgot-password.blade.php
                           
                            <div class="field margin_0">
                               <label class="label_field hidden">hidden label</label>
