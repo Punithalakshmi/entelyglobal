@@ -11,11 +11,8 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Validation\Rules;
 use Illuminate\View\View;
-<<<<<<< HEAD
 use App\Mail\RegistrationMail;
 use Mail;
-=======
->>>>>>> 9ba24f8 (Authentication Design migration)
 
 class RegisteredUserController extends Controller
 {
@@ -38,11 +35,7 @@ class RegisteredUserController extends Controller
             'firstname' => ['required', 'string', 'max:255'],
             'lastname' => ['required', 'string', 'max:255'],
             'email' => ['required', 'string', 'lowercase', 'email', 'max:255', 'unique:'.User::class],
-<<<<<<< HEAD
             'password' => ['required','confirmed', Rules\Password::defaults()],
-=======
-            'password' => ['required', 'confirmed', Rules\Password::defaults()],
->>>>>>> 9ba24f8 (Authentication Design migration)
             'address' => ['required', 'string', 'max:255'],
             'phonenumber' => ['required','regex:/^[0-9]{10,15}$/'], 
         ]);
@@ -58,7 +51,6 @@ class RegisteredUserController extends Controller
 
         event(new Registered($user));
 
-<<<<<<< HEAD
         $mailData = array(
             'title' => 'Registration',
             'name' => $request->firstname
@@ -69,14 +61,5 @@ class RegisteredUserController extends Controller
         //Auth::login($user);
 
         return redirect(route('login', absolute: false));
-=======
-        Auth::login($user);
-
-<<<<<<< HEAD
-        return redirect(route('dashboard', absolute: false));
->>>>>>> 9ba24f8 (Authentication Design migration)
-=======
-        return redirect(route('admin/dashboard', absolute: false));
->>>>>>> 8195b83 (Theme Integration)
     }
 }

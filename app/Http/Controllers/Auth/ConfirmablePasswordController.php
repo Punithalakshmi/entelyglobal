@@ -35,14 +35,6 @@ class ConfirmablePasswordController extends Controller
 
         $request->session()->put('auth.password_confirmed_at', time());
 
-<<<<<<< HEAD
-<<<<<<< HEAD
         return redirect()->intended(route('admin/dashboard', absolute: false));
-=======
-        return redirect()->intended(route('dashboard', absolute: false));
->>>>>>> 9ba24f8 (Authentication Design migration)
-=======
-        return redirect()->intended(route('admin/dashboard', absolute: false));
->>>>>>> 8195b83 (Theme Integration)
     }
 }
