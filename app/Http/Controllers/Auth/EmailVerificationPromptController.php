@@ -16,10 +16,14 @@ class EmailVerificationPromptController extends Controller
     {
         return $request->user()->hasVerifiedEmail()
 <<<<<<< HEAD
+<<<<<<< HEAD
                     ? redirect()->intended(route('admin/dashboard', absolute: false))
 =======
                     ? redirect()->intended(route('dashboard', absolute: false))
 >>>>>>> 9ba24f8 (Authentication Design migration)
+=======
+                    ? redirect()->intended(route('admin/dashboard', absolute: false))
+>>>>>>> 8195b83 (Theme Integration)
                     : view('auth.verify-email');
     }
 }

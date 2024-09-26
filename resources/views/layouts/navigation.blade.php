@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 8195b83 (Theme Integration)
 <!-- Sidebar  -->
 <nav id="sidebar" class="ps">
                <div class="sidebar_blog_1">
@@ -43,6 +46,7 @@
                     </ul>
                </div>
                 <div class="ps__rail-x" style="left: 0px; bottom: 0px;"><div class="ps__thumb-x" tabindex="0" style="left: 0px; width: 0px;"></div></div><div class="ps__rail-y" style="top: 0px; right: 0px;"><div class="ps__thumb-y" tabindex="0" style="top: 0px; height: 0px;"></div></div><div class="ps__rail-x" style="left: 0px; bottom: 0px;"><div class="ps__thumb-x" tabindex="0" style="left: 0px; width: 0px;"></div></div><div class="ps__rail-y" style="top: 0px; right: 0px;"><div class="ps__thumb-y" tabindex="0" style="top: 0px; height: 0px;"></div>
+<<<<<<< HEAD
                 </div>
             </nav>
             <!-- end sidebar -->
@@ -59,16 +63,14 @@
                     <a href="{{ route('dashboard') }}">
                         <x-application-logo class="block h-9 w-auto fill-current text-gray-800" />
                     </a>
+=======
+>>>>>>> 8195b83 (Theme Integration)
                 </div>
+            </nav>
+            <!-- end sidebar -->
 
-                <!-- Navigation Links -->
-                <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
-                    <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
-                        {{ __('Dashboard') }}
-                    </x-nav-link>
-                </div>
-            </div>
 
+<<<<<<< HEAD
             <!-- Settings Dropdown -->
             <div class="hidden sm:flex sm:items-center sm:ms-6">
                 <x-dropdown align="right" width="48">
@@ -150,3 +152,5 @@
     </div>
 </nav>
 >>>>>>> 9ba24f8 (Authentication Design migration)
+=======
+>>>>>>> 8195b83 (Theme Integration)

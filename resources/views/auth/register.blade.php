@@ -56,6 +56,7 @@
                         <div class="field">
                             <label class="label_field">First Name</label>
 <<<<<<< HEAD
+<<<<<<< HEAD
                             <input type="text" name="firstname" placeholder="First Name" :value="old('firstname')" autofocus autocomplete="firstname">
                         </div>
                         @error('firstname')
@@ -111,6 +112,9 @@
                             @enderror
 =======
                             <input type="text" name="firstname" placeholder="First Name" :value="old('firstname')" required autofocus autocomplete="firstname">
+=======
+                            <input type="text" name="firstname" placeholder="First Name" :value="old('firstname')" autofocus autocomplete="firstname">
+>>>>>>> 8195b83 (Theme Integration)
                            
                             @error('firstname')
                                 <div class="alert alert-danger">{{ $message }}</div>
@@ -118,42 +122,42 @@
                         </div>
                         <div class="field">
                             <label class="label_field">Last Name</label>
-                            <input type="text" name="lastname" placeholder="Last Name" :value="old('lastname')" required autofocus autocomplete="lastname">
+                            <input type="text" name="lastname" placeholder="Last Name" :value="old('lastname')" autofocus autocomplete="lastname">
                             @error('lastname')
                                 <div class="alert alert-danger">{{ $message }}</div>
                             @enderror
                         </div>
                         <div class="field">
                             <label class="label_field">Email Address</label>
-                            <input type="email" name="email" placeholder="E-mail" :value="old('email')" required autocomplete="username" >
+                            <input type="email" name="email" placeholder="E-mail" :value="old('email')" autocomplete="username" >
                             @error('email')
                                 <div class="alert alert-danger">{{ $message }}</div>
                             @enderror
                         </div>
                         <div class="field">
                             <label class="label_field">Phone Number</label>
-                            <input type="number" name="phonenumber" placeholder="Phone Number" :value="old('phonenumber')" required autocomplete="phonenumber">
+                            <input type="number" name="phonenumber" placeholder="Phone Number" :value="old('phonenumber')"  autocomplete="phonenumber">
                             @error('phonenumber')
                                 <div class="alert alert-danger">{{ $message }}</div>
                             @enderror
                         </div>
                         <div class="field">
                             <label class="label_field">Address</label>
-                            <textarea class="form-control" name="address">Address...</textarea>
+                            <textarea class="form-control" name="address"></textarea>
                             @error('address')
                                 <div class="alert alert-danger">{{ $message }}</div>
                             @enderror
                         </div>
                         <div class="field">
                             <label class="label_field">Password</label>
-                            <input type="password" id="password" name="password" placeholder="Password" required autocomplete="new-password">
+                            <input type="password" id="password" name="password" placeholder="Password" autocomplete="new-password">
                             @error('password')
                                 <div class="alert alert-danger">{{ $message }}</div>
                             @enderror
                         </div>
                         <div class="field">
                             <label class="label_field">Confirm Password</label>
-                            <input type="password" id="password_confirmation" placeholder="Confirm Password" name="password_confirmation" required autocomplete="new-password">
+                            <input type="password" id="password_confirmation" placeholder="Confirm Password" name="password_confirmation" autocomplete="new-password">
                             @error('password_confirmation')
                                 <div class="alert alert-danger">{{ $message }}</div>
                             @enderror

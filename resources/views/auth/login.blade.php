@@ -63,6 +63,7 @@
                               <label class="label_field">Email Address</label>
                               <input type="email" id="email" name="email" placeholder="E-mail">
 <<<<<<< HEAD
+<<<<<<< HEAD
                              
                 
                            </div>
@@ -79,10 +80,13 @@
                               @enderror
 =======
                               <x-input-error :messages="$errors->get('email')" class="mt-2" :value="old('email')" required autofocus autocomplete="username" />
+=======
+                              <x-input-error :messages="$errors->get('email')" class="mt-2" :value="old('email')"  autofocus autocomplete="username" />
+>>>>>>> 8195b83 (Theme Integration)
                            </div>
                            <div class="field">
                               <label class="label_field">Password</label>
-                              <input type="password" name="password" id="password" placeholder="Password" required autocomplete="current-password">
+                              <input type="password" name="password" id="password" placeholder="Password"  autocomplete="current-password">
                               <x-input-error :messages="$errors->get('password')" class="mt-2" />
                            </div>
 >>>>>>> 9ba24f8 (Authentication Design migration)

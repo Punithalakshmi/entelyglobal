@@ -72,7 +72,11 @@ class RegisteredUserController extends Controller
 =======
         Auth::login($user);
 
+<<<<<<< HEAD
         return redirect(route('dashboard', absolute: false));
 >>>>>>> 9ba24f8 (Authentication Design migration)
+=======
+        return redirect(route('admin/dashboard', absolute: false));
+>>>>>>> 8195b83 (Theme Integration)
     }
 }
